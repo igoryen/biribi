@@ -1,21 +1,24 @@
 var Delta = (function (name) {return name;}(Delta || {}));
 
+//
+Delta.Person = function(fname, lname){
+	this.fname = fname;
+	this.lname = lname;
+	this.$firstName = $("#fname");
+	this.$lastName = $("#lname");
 
-Delta.A = (function () {
-	// variables
+};
 
-	// functions
-	var delta = function() {
-		$("#d").text("This is Delta");
-	};
+Delta.Person.prototype.init = function() {
+	this.firstName();
+	this.lastName();
+}
 
-	// init
-	var init = function() {
-		delta();
-	};
+Delta.Person.prototype.firstName = function() {
+	this.$firstName.text = this.fname;
+}
 
-	return {
-		init : init
-	}
+Delta.Person.prototype.lastName = function() {
+	this.$lastName.text = this.lname;
+}
 
-})(); // автозапуск

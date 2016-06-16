@@ -1,7 +1,8 @@
 window.onload = function() {
 
- 	Alpha.A.init();
- 	Bravo.A.init();
+    Alpha.A.init();
+    Bravo.A.init();
     Charlie.A.init();
-    Delta.A.init();
+    var p = new Delta.Person("Daniel", "Entaltsev");
+    p.init();
 };
