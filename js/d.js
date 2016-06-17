@@ -6,6 +6,7 @@ Delta.Person = function(fname, lname){
 	this.lname = lname;
 	this.$firstName = $("#fname");
 	this.$lastName = $("#lname");
+	this.$firstName.text();
 
 };
 
@@ -15,10 +16,10 @@ Delta.Person.prototype.init = function() {
 }
 
 Delta.Person.prototype.firstName = function() {
-	this.$firstName.text = this.fname;
+	this.$firstName.text(this.fname);
 }
 
 Delta.Person.prototype.lastName = function() {
-	this.$lastName.text = this.lname;
+	this.$lastName.text(this.lname);
 }
 
